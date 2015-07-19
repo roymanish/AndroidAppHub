@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".AppHubMainActivity">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@android:id/list"
+            android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@android:id/list">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/separator"
+            android:visibility="visible"
+            android:background="@android:color/darker_gray"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Product Count :"
+            android:textColor="@android:color/holo_blue_dark"
+            android:id="@+id/productCountLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Cnt Val"
+            android:textColor="@android:color/holo_blue_dark"
+            android:id="@+id/productCountValue"
+            android:layout_toRightOf="@+id/productCountLabel"
+            android:layout_toEndOf="@+id/productCountLabel"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"/>
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:text="Sort By Rating"
+            android:id="@+id/sortByRating"
+            android:layout_below="@+id/productCountLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/lt_red_rounded_rect"/>
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:text="Sort By Price"
+            android:id="@+id/sortByPrice"
+            android:layout_below="@+id/productCountValue"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/br_red_rounded_rect"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
